@@ -4,6 +4,7 @@
   "description": "shortcut to fs.readFile or fs.readFileSync",
   "main": "index.js",
   "scripts": {
+    "postversion": "git push origin v${npm_package_version}; npm publish; npm run _push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
