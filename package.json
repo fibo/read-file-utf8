@@ -1,6 +1,6 @@
 {
   "name": "read-file-utf8",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "shortcut to fs.readFile or fs.readFileSync",
   "main": "index.js",
   "scripts": {
