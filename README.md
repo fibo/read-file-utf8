@@ -2,6 +2,12 @@
 
 > shortcut to [fs.readFile][readFile] or [fs.readFileSync][readFileSync]
 
+* [API](#api)
+* [Usage](#usage)
+* [Use case](#use-case)
+* [See also](#see-also)
+* [License](#license)
+
 ## API
 
 ### `readFile(filePath[, callback])`
@@ -51,6 +57,42 @@ actually is equivalent to
 
 ```javascript
 var content = fs.readFileSync('/tmp/bar', 'utf8')
+```
+
+## Use case
+
+Suppose you have some SQL queries. It is really better to put every query
+in its own *queryFile.sql*, instead then inside *someOtherFile.js*.
+
+Create a *sql/* folder and put there all your queries. Add also a
+*sql/index.js* with the following content
+
+```javascript
+var path = require('path')
+var read = require('read-file-utf8')
+
+function sql (fileName) {
+  return read(path.join(__dirname, `${fileName}.sql`))
+}
+
+module.exports = sql
+```
+
+Now you are able to do, for example
+
+```javascript
+var sql = require('./path/to/sql')
+var pg = require('pg-promise')
+var Q = require('q')
+
+var connectionString = 'your connection string here'
+
+var client = pgPromise({
+  promiseLib: Q
+})(connectionString)
+
+client.oneOrNone(sql('count_winners'))
+      .then((data) => { /* your code to handle data here */ })
 ```
 
 ## See also
