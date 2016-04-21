@@ -82,7 +82,7 @@ Now you are able to do, for example
 
 ```javascript
 var sql = require('./path/to/sql')
-var pg = require('pg-promise')
+var pgPromise = require('pg-promise')
 var Q = require('q')
 
 var connectionString = 'your connection string here'
