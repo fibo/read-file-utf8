@@ -4,7 +4,7 @@
 
 * [API](#api)
 * [Usage](#usage)
-* [Use case](#use-case)
+* [Example](#example)
 * [See also](#see-also)
 * [License](#license)
 
@@ -59,10 +59,12 @@ actually is equivalent to
 var content = fs.readFileSync('/tmp/bar', 'utf8')
 ```
 
-## Use case
+## Example
 
 Suppose you have some SQL queries. It is really better to put every query
 in its own *queryFile.sql*, instead then inside *someOtherFile.js*.
+
+**NOTA BENE**: this is just example, *pg-promise* already has an [API to hande files](https://github.com/vitaly-t/pg-promise#query-files).
 
 Create a *sql/* folder and put there all your queries. Add also a
 *sql/index.js* with the following content
