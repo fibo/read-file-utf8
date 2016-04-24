@@ -10,8 +10,7 @@ var fs = require('fs')
 function readFileUtf8 (filePath, callback) {
   if (typeof callback === 'function') {
     fs.readFile(filePath, 'utf8', callback)
-  }
-  else {
+  } else {
     return fs.readFileSync(filePath, 'utf8')
   }
 }
