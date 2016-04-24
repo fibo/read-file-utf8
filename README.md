@@ -53,7 +53,7 @@ If no callback is provided, the synchronous version is used, hence the snippet
 var content = read('/tmp/bar')
 ```
 
-actually is equivalent to
+is equivalent to
 
 ```javascript
 var content = fs.readFileSync('/tmp/bar', 'utf8')
@@ -63,8 +63,6 @@ var content = fs.readFileSync('/tmp/bar', 'utf8')
 
 Suppose you have some SQL queries. It is really better to put every query
 in its own *queryFile.sql*, instead then inside *someOtherFile.js*.
-
-**NOTA BENE**: this is just example, *pg-promise* already has an [API to hande files](https://github.com/vitaly-t/pg-promise#query-files).
 
 Create a *sql/* folder and put there all your queries. Add also a
 *sql/index.js* with the following content
@@ -80,21 +78,31 @@ function sql (fileName) {
 module.exports = sql
 ```
 
+Suppose there is a *sql/count_winners.sql* file with the following content
+
+```sql
+SELECT COUNT(*) AS num
+FROM foo.contest
+WHERE is_winner IS TRUE
+```
+
 Now you are able to do, for example
 
 ```javascript
-var sql = require('./path/to/sql')
-var pgPromise = require('pg-promise')
-var Q = require('q')
+var sql = require('./path/to/sql/')
+var pg = require('pg')
 
-var connectionString = 'your connection string here'
+var conString = 'your connection string here'
 
-var client = pgPromise({
-  promiseLib: Q
-})(connectionString)
+pg.connect(conString, function (err, client, done) {
+  if (err) return console.error(err)
 
-client.oneOrNone(sql('count_winners'))
-      .then((data) => { /* your code to handle data here */ })
+  client.query(sql('count_winners'), function (err, result) {
+    if (err) return console.error(err)
+
+    console.log(result.rows[0].num)
+  })
+})
 ```
 
 ## See also
