@@ -2,11 +2,11 @@
 
 > shortcut to [fs.readFile][readFile] or [fs.readFileSync][readFileSync]
 
-* [API](#api)
-* [Usage](#usage)
-* [Example](#example)
-* [See also](#see-also)
-* [License](#license)
+[API](#api) |
+[Usage](#usage) |
+[Example](#example) |
+[See also](#see-also) |
+[License](#license)
 
 ## API
 
@@ -107,7 +107,7 @@ pg.connect(conString, function (err, client, done) {
 
 ## See also
 
-* [write-file-utf8](http://npm.im/write-file-utf8)
+* [write-file-utf8](http://g14n.info/write-file-utf8)
 * [fs.readFile][readFile]
 * [fs.readFileSync][readFileSync]
 

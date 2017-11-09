@@ -1,4 +1,4 @@
-var fs = require('fs')
+const fs = require('fs')
 
 /**
  * Read content from file using utf8 encoding
