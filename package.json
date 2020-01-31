@@ -14,7 +14,12 @@
   },
   "keywords": [
     "fs",
-    "utf8"
+    "read",
+    "file",
+    "utf8",
+    "utf-8",
+    "async",
+    "promise"
   ],
   "author": {
     "name": "Gianluca Casati",
