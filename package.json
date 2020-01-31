@@ -1,12 +1,12 @@
 {
   "name": "read-file-utf8",
   "version": "1.1.2",
-  "description": "shortcut to fs.readFile or fs.readFileSync",
+  "description": "reads content from file using utf-8 encoding",
   "main": "read-file-utf8.js",
   "scripts": {
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "lint": "standa",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_PATH=. node usage.js"
   },
   "repository": {
     "type": "git",
@@ -24,8 +24,8 @@
   "bugs": {
     "url": "https://github.com/fibo/read-file-utf8/issues"
   },
-  "homepage": "http://g14n.info/read-file-utf8",
+  "homepage": "https://g14n.info/read-file-utf8",
   "devDependencies": {
-    "standa": "^1.0.2"
+    "standa": "^14.0.0"
   }
 }
