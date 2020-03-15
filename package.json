@@ -30,7 +30,5 @@
     "url": "https://github.com/fibo/read-file-utf8/issues"
   },
   "homepage": "https://g14n.info/read-file-utf8",
-  "devDependencies": {
-    "standa": "^14.0.0"
-  }
+  "devDependencies": {}
 }
