@@ -8,6 +8,9 @@
 [See also](#see-also) |
 [License](#license)
 
+[![NPM version](https://badge.fury.io/js/read-file-utf8.svg)](http://badge.fury.io/js/read-file-utf8)
+[![No deps](https://img.shields.io/badge/dependencies-none-green.svg)](https://github.com/fibo/read-file-utf8)
+
 ## API
 
 ### `read(filePath)`
