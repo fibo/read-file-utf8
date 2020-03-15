@@ -7,7 +7,7 @@ const filePath = 'file.txt'
 async function example () {
   try {
     // Read file content.
-    //////////////////////////////////////////////////////////////////
+    /// ///////////////////////////////////////////////////////////////
     const content = await read(filePath)
 
     console.log(content)
@@ -20,4 +20,3 @@ async function example () {
 
 // Run example.
 example()
-
