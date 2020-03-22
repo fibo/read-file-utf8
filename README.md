@@ -4,7 +4,7 @@
 
 [API](#api) |
 [Usage](#usage) |
-[Example](#example) |
+[Examples](#examples) |
 [See also](#see-also) |
 [License](#license)
 
@@ -20,6 +20,8 @@ It is a function that returns a *Promise* and requires one parameter:
 * **@param** `{String}` filePath
 
 ## Usage
+
+Read from a text file.
 
 ```javascript
 const read = require('read-file-utf8')
@@ -46,7 +48,24 @@ async function example () {
 example()
 ```
 
-## Example
+## Examples
+
+### Import JSON
+
+This makes sense at the time of this writing (2020) since it is not possibile to import JSON using `require` when ES modules are enabled in Node.
+For example to read version from a *package.json* you can do something like the following.
+
+```javascript
+async function showPackageJsonVersion () {
+  const { version } = await readFile('package.json').then(content => JSON.parse(content))
+
+  console.log(version)
+}
+
+showPackageJsonVersion()
+```
+
+### Read SQL files
 
 Suppose you have some SQL queries. It is really better to put every query
 in its own *queryFile.sql* good old SQL file, instead then inside *someOtherFile.js* JavaScript file.
