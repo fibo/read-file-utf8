@@ -1,4 +1,4 @@
-const read = require('read-file-utf8')
+const readFile = require('read-file-utf8')
 
 const filePath = 'file.txt'
 
@@ -7,8 +7,8 @@ const filePath = 'file.txt'
 async function example () {
   try {
     // Read file content.
-    /// ///////////////////////////////////////////////////////////////
-    const content = await read(filePath)
+    // /////////////////
+    const content = await readFile(filePath)
 
     console.log(content)
   } catch (error) {
