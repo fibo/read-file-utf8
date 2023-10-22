@@ -1,13 +1,19 @@
 {
   "name": "read-file-utf8",
-  "version": "2.0.4",
-  "description": "reads content from file using utf-8 encoding",
-  "main": "read-file-utf8.js",
-  "types": "read-file-utf8.d.ts",
+  "version": "3.0.0",
+  "description": "reads content from file using utf-8 encoding, also imports JSON files easily",
+  "type": "module",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./read-file-utf8.js"
+      }
+    }
+  },
   "scripts": {
-    "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
-    "lint": "standa",
-    "test": "NODE_PATH=. node usage.js"
+    "test": "node usage.js"
   },
   "repository": {
     "type": "git",
@@ -20,16 +26,20 @@
     "utf8",
     "utf-8",
     "async",
-    "promise"
+    "promise",
+    "json"
   ],
   "author": {
     "name": "Gianluca Casati",
-    "url": "http://g14n.info"
+    "url": "https://fibo.github.io"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fibo/read-file-utf8/issues"
   },
-  "homepage": "https://g14n.info/read-file-utf8",
-  "devDependencies": {}
+  "homepage": "https://fibo.github.io/read-file-utf8",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.8.0"
+  }
 }
