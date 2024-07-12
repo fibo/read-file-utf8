@@ -2,12 +2,6 @@
 
 > reads content from file using utf-8 encoding, also imports JSON files easily
 
-[Installation](#installation) |
-[Usage](#usage) |
-[Examples](#examples) |
-[See also](#see-also) |
-[License](#license)
-
 ## Installation
 
 With [npm](https://npmjs.org/) do
@@ -117,9 +111,9 @@ console.log(res.rows);
 
 ## See also
 
-- [write-file-utf8](https://fibo.github.io/write-file-utf8)
+- [write-file-utf8](https://github.com/fibo/write-file-utf8)
 
 ## License
 
-[MIT](http://g14n.info/mit-license/)
+[MIT](https://fibo.github.io/mit-license/)
 
