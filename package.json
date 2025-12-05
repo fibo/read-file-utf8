@@ -37,7 +37,6 @@
   "bugs": {
     "url": "https://github.com/fibo/read-file-utf8/issues"
   },
-  "homepage": "https://fibo.github.io/read-file-utf8",
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^20.8.0"
