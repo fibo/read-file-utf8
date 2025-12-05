@@ -1,17 +1,10 @@
 {
   "name": "read-file-utf8",
-  "version": "3.0.0",
-  "description": "reads content from file using utf-8 encoding, also imports JSON files easily",
+  "version": "3.0.2",
+  "description": "Read content from file using utf-8 encoding, supports typed JSON files",
   "type": "module",
-  "types": "index.d.ts",
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./index.d.ts",
-        "default": "./read-file-utf8.js"
-      }
-    }
-  },
+  "types": "./read-file-utf8.d.ts",
+  "exports": "./read-file-utf8.js",
   "scripts": {
     "test": "node usage.js"
   },
@@ -37,8 +30,5 @@
   "bugs": {
     "url": "https://github.com/fibo/read-file-utf8/issues"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "@types/node": "^20.8.0"
-  }
+  "dependencies": {}
 }
