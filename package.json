@@ -6,7 +6,7 @@
   "types": "./read-file-utf8.d.ts",
   "exports": "./read-file-utf8.js",
   "scripts": {
-    "test": "node usage.js"
+    "test": "node test.ts"
   },
   "repository": {
     "type": "git",
